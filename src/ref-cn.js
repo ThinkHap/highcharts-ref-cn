@@ -270,6 +270,8 @@ function afterParse(index) {
             } else {
                 hilight(); // remove hilighting
             }
+            console.log('return false', link);
+            return false;
         });
         
         if (!/--/.test(link)) {
