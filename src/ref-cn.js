@@ -270,7 +270,8 @@ function afterParse(index) {
             } else {
                 hilight(); // remove hilighting
             }
-            console.log('return false', link);
+            //$("html,body").animate({scrollTop:$("#"+link).offset().top}, 500);
+            $('body').scrollTop($('#'+link).offset().top);
             return false;
         });
         
@@ -289,6 +290,7 @@ function afterParse(index) {
                     });
                     
                 }
+                return false;
             });
         }
     });
